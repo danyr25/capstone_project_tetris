@@ -3,3 +3,4 @@ pandas
 pickle
 altair
 scikit-learn
+sklearn.linear_model
