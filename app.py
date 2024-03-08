@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import altair as alt
-import sklearn
+import scikit-learn as sklearn
 from sklearn.linear_model import LinearRegression
 
 st.set_page_config(
