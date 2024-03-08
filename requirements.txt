@@ -1,5 +1,5 @@
 streamlit
 pandas
-pickle
 altair
 scikit-learn
+pickleshare
