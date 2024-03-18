@@ -66,7 +66,6 @@ with st.sidebar:
     st.image('https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/1280/desain-rumah-klasik-2-lantai-18180122-44542826230922123843.jpg')
     with st.expander('Disclaimer'):
         text = 'Data yang digunakan pada app ini adalah 810 data yang diekstrak dari situs rumah123.com'
-
         st.write(text)
     with st.expander('Contact'):
         st.write('danyrahman1225@gmail.com')
@@ -81,10 +80,15 @@ with home:
     p1.write('Rumah adalah salah satu hal yang tidak dapat dipisahkan dari kehidupan manusia. Selain sebagai pemenuhan kebutuhan papan manusia, rumah beserta tanahnya merupakan salahs satu objek investasi yang menjanjikan. Layaknya jual beli barang, jual beli rumah pun sudah tersedia secara online seperti pada situs rumah123 yang menyediakan berbagai macam penawaran rumah untuk dibeli.')
     p2 = st.container(border=True)
     p2.write('Dalam praktik jual belinya, kebanyakan orang hanya menetapkan nilai dari rumah dengan sedikit aspek. Aspek yang paling sering digunakan untuk mengukur nilai suatu rumah adalah luas tanah dan luas bangunan. Namun, apakah hanya dengan melihat hal tersebut sudah cukup? Sayangnya hal tersebut tidak cukup untuk mendapatkan nilai jual yang ideal dan realistis. Oleh karena itu, diperlukan suatu alat yang dapat mengukur nilai dari suatu rumah.')
-    p3 = st.container(border=True)
-    p3.write('Berdasarkan situs katadata.co.id, terdapat sekitar 10,5 juta warga Indonesia tidak memiliki rumah (data dapat dilihat pada grafik di bawah). Angka ini didominasi oleh generasi milenial. Karena hal tersebut, beberapa kelompok masyarakat beranggapan bahwa generasi milenial tidak dapat mengelola keuangan dengan baik atau rumah bukanlah prioritas mereka. Namun, benarkah hal tersebut yang terjadi? Menteri Keuangan Sri Mulyani pernah mengatakan bahwa generasi milenial bukanlah tidak butuh rumah, namun harga rumahnya lebih tinggi dibanding daya beli mereka. Benarkah hal itu yang sebenarnya terjadi?')
-    p3.image('Backlog_katadata.png')
-    p3.write('Sumber: https://katadata.co.id/cek-data/64f5514d97595/cek-data-mengapa-milenial-sulit-punya-rumah')
+    with st.container(border=True):
+        st.write('Berdasarkan situs katadata.co.id, terdapat sekitar 10,5 juta warga Indonesia tidak memiliki rumah (data dapat dilihat pada grafik di bawah). Angka ini didominasi oleh generasi milenial. Karena hal tersebut, beberapa kelompok masyarakat beranggapan bahwa generasi milenial tidak dapat mengelola keuangan dengan baik atau rumah bukanlah prioritas mereka. Namun, benarkah hal tersebut yang terjadi? Menteri Keuangan Sri Mulyani pernah mengatakan bahwa generasi milenial bukanlah tidak butuh rumah, namun harga rumahnya lebih tinggi dibanding daya beli mereka. Benarkah hal itu yang sebenarnya terjadi?')
+
+        _, img_col, _ = st.columns([0.25, 0.5, 0.25])
+
+        with img_col:
+            st.image('Backlog_katadata.png')
+
+        st.write('Sumber: https://katadata.co.id/cek-data/64f5514d97595/cek-data-mengapa-milenial-sulit-punya-rumah')
 
 with dashboard:
     st.markdown('<div style="text-align: center;"><h4>Banyak Penjualan Rumah di Kota di Indonesia</h4></div>', unsafe_allow_html=True)
@@ -293,7 +297,7 @@ with app:
 with summary:
     st.subheader('Kesimpulan')
     conc = st.container(border=True)
-    conc.write('- Sebaran harga rumah di Indonesia maupun di daerah-daerahnya memiliki rentang yang sangat lebar.\n- Berdasarkan banyaknya post penjualan rumah yang menggunakan tag nego, dapat diprediksi bahwa terdapat banyak ketidaktahuan atau keraguan akan standar harga suatu rumah.\n- Di Indonesia dan di daerah-daerahnya memiliki besar KPR yang jauh lebih tinggi daripada UMR daerah tersebut. Hal ini menunjukkan tingginya ketidakmampuan masyarakat untuk memiliki sebuah rumah.\n- Terdapat beberapa aspek yang berpengaruh pada harga suatu rumah, di antaranya adalah luas bangunan, luas tanah, banyak kamar tidur serta kamar mandi, banyak lantai, dan UMR atau daerah lokasi rumah tersebut.')
+    conc.write('- Sebaran harga rumah di Indonesia maupun di daerah-daerahnya memiliki rentang yang sangat lebar dengan kebanyakan harga rumah di sekitar harga 5 miliar Rupiah.\n- Berdasarkan banyaknya post penjualan rumah yang menggunakan tag nego, dapat diprediksi bahwa terdapat banyak ketidaktahuan atau keraguan akan standar harga suatu rumah.\n- Di Indonesia dan di daerah-daerahnya memiliki besar KPR yang jauh lebih tinggi daripada UMR daerah tersebut. Hal ini menunjukkan tingginya ketidakmampuan masyarakat untuk memiliki sebuah rumah.\n- Terdapat beberapa aspek yang berpengaruh pada harga suatu rumah, di antaranya adalah luas bangunan, luas tanah, banyak kamar tidur serta kamar mandi, banyak lantai, dan UMR atau daerah lokasi rumah tersebut.')
     st.divider()
 
     st.subheader('Interpretasi Regresi Linier')
