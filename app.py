@@ -302,7 +302,7 @@ with summary:
 
     st.subheader('Interpretasi Regresi Linier')
     conc = st.container(border=True)
-    conc.write('- Setiap Rp1.00 UMR akan menambah nilai jual rumah sebesar Rp141.06.\n- Setiap 1 mm\u00b2 luas bangunan akan menambah nilai jual rumah sebesar Rp7,992,342.55.\n- Setiap 1 mm\u00b2 luas tanah akan menambah nilai jual rumah sebesar Rp8,764,550.41.')
+    conc.write('- Setiap Rp1.00 UMR akan menambah nilai jual rumah sebesar Rp141.06.\n- Setiap 1 m\u00b2 luas bangunan akan menambah nilai jual rumah sebesar Rp7,992,342.55.\n- Setiap 1 m\u00b2 luas tanah akan menambah nilai jual rumah sebesar Rp8,764,550.41.')
     st.divider()
 
     st.subheader('Saran')
